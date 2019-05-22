@@ -265,7 +265,7 @@ Nun wechseln wir das Fenster und sind wieder auf unserer **Google Tabelle** und 
 <a id='chapter_3-2'></a>
 ### 3.b Anschließen des Sensors
 
-Der Sensor wird gleich an die Steckplätze des Raspberry angeschlossen. Damit der Raspberry mit den Steckplätzen sprechen kann, müssen wir aber zunächst im **Hauptmenü** (Beere oben links) im Punkt "Einstellungen"/"Raspberry Pi Konfiguration" den Punkt **I2C** aktivieren:
+Der Sensor wird gleich an die Steckplätze des Raspberry angeschlossen. Damit der Raspberry mit den Steckplätzen sprechen kann, müssen wir aber zunächst im **Hauptmenü** (Beere oben links) im Punkt "Einstellungen"/"Raspberry Pi Konfiguration" das Untermenü "Schnittstellen" auswählen und dort den Punkt **I2C** aktivieren:
 
 </br><img src="./pics/3_sensor_1.png" width=600 style="border:1px solid black">
 </br> 
@@ -296,7 +296,7 @@ Das war nun manuell-handwerklich aber auch der frickeligste Teil...
 
 Den Raspi nun wieder anschließen und anschalten. Es erscheint unter Umständen eine Warnung wegen der geänderten Konfiguration, diese einfach wegklicken ("OK).  Um die Software herunterzuladen, die dafür sorgt, dass der Raspberry sowohl mit dem Sensor als auch mit Google "sprechen" also Daten austauschen kann, "clonen" wir ein Github-Repository (eine Datenablage) auf den Desktop des Raspberry. 
 
-Dazu machen wir zunächst einen Terminal / eine Konsole auf (schwarzes Fenster-Symbol oben links auf dem Raspberry-Bildschirm) und geben `cd Desktop` (+ `Enter`, sonst passiert nichts) für den Wechsel ins Desktop-Verzeichnis ein. Erscheint nun eine Fehlermeldung, weil das Verzeichnis nicht gefunden wurde, prüfen, ob man schon im Ordner "/home/pi/Desktop" ist. Bei allen Befehlen dort unbedingt Groß- und Kleinschreibung beachten und auch Leerzeichen.
+Dazu machen wir zunächst einen Terminal / eine Konsole auf (schwarzes Fenster-Symbol oben links auf dem Raspberry-Bildschirm) und geben `cd Desktop` (+ `Enter`, sonst passiert nichts) für den Wechsel ins Desktop-Verzeichnis ein. Erscheint nun eine Fehlermeldung, weil das Verzeichnis nicht gefunden wurde, prüfen, ob man schon im Ordner "/home/pi/Desktop" ist. Bei allen Befehlen dort unbedingt Groß- und Kleinschreibung beachten und auch Leerzeichen. Wenn wir etwas aus der "normalen", grafischen Oberfläche (z. B. einem Browserfenster) kopieren und in der Konsole einfügen wollen, dann funktioniert das mit Strg-Umschalten-V. 
 
 <img src="./pics/3_software_01.png" width=600 style="border:1px solid black"></br> 
 
@@ -332,7 +332,7 @@ Zwei Dinge sind hier (jeweils hinter dem `=`-Zeichen zu ergänzen:
 
 Nun speichern wir das modifizierte Skript (Button "Save").
 
-Wir müssen auch überprüfen, ob die "pins" wie erwartet sind (Adressen der Steckverbindungen des Sensors mit dem Raspberry).
+Wir müssen auch überprüfen, ob die "pins" wie erwartet angeschlossen sind (Adressen der Steckverbindungen des Sensors mit dem Raspberry).
 
 Dazu geben wir im Terminal `i2cdetect -y 1` ein (I2C heißt übrigens ["Inter Integrated Circuit"](https://de.wikipedia.org/wiki/I%C2%B2C)):
 
